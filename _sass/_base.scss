@@ -1305,3 +1305,13 @@ ninja-keys::part(ninja-input-wrapper) {
   background-color: var(--global-theme-color);
   color: var(--global-text-color);
 }
+
+// 控制按钮文字大小写
+.links .btn {
+  text-transform: capitalize;
+}
+
+// 保持特定按钮的原有大小写
+.links .btn.preserve-case {
+  text-transform: none;
+}

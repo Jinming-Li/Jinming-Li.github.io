@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
+subtitle: <a href='#'>Affiliations</a>. master student in Shanghai   University.
 
 profile:
   align: right
@@ -12,8 +12,9 @@ profile:
     <p>Email: ljm2022@shu.edu.cn</p>
     <p>Address: Shanghai, China</p>
 
-news: true # includes a list of news items
+news: false # includes a list of news items
+
 selected_papers: true # includes a list of papers marked as "selected={true}"
-social: true # includes social icons at the bottom of the page
+social: true # includes social icons at the bottom of the page 
 ---
-I am a graduate student at Shanghai University and I am passionate about studying embodied intelligence.
+I am a third-year master student at Shanghai University advised by [Yaxin Peng](https://scicol.shu.edu.cn/szdw/faculty/pyx.htm). I am also an embodied intelligence algorithm intern at [Midea Group](https://www.midea.com.cn). I am passionate about studying embodied intelligence. 
