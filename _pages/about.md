@@ -7,7 +7,7 @@ enable_snow: true
 
 profile:
   align: right
-  image: _MG_6034.jpg
+  image: prof_ljm.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
     <p>Email: ljm2022@shu.edu.cn</p>
