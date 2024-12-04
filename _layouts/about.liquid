@@ -1,7 +1,9 @@
 ---
 layout: default
 ---
-<div class="post">
+<div class="post" style="cursor: url('data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22><text y=%2216%22 font-size=%2224%22>🔥</text></svg>') 12 12, auto;">
+  <canvas id="snow" style="position: fixed; top: 0; left: 0; pointer-events: none; z-index: 1000;"></canvas>
+
   <header class="post-header">
     <h1 class="post-title">
       {% if site.title == 'blank' %}
@@ -77,4 +79,78 @@ layout: default
       {% include scripts/newsletter.liquid center=true %}
     {% endif %}
   </article>
+
+  <script>
+    (function() {
+      const canvas = document.getElementById('snow');
+      const ctx = canvas.getContext('2d');
+      const robotLogo = document.getElementById('robot-logo');
+      
+      // 设置canvas尺寸为窗口大小
+      function setCanvasSize() {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+      }
+      setCanvasSize();
+      window.addEventListener('resize', setCanvasSize);
+      
+      // 雪花类
+      class Snowflake {
+        constructor() {
+          this.x = Math.random() * canvas.width;
+          this.y = Math.random() * canvas.height;
+          this.size = Math.random() * 3 + 2;
+          this.speed = Math.random() * 1 + 0.5;
+          this.wind = Math.random() * 0.5 - 0.25;
+          this.points = Math.floor(Math.random() * 5) + 5; // 随机生成5到9个点的雪花
+        }
+        
+        update() {
+          this.y += this.speed;
+          this.x += this.wind;
+          
+          if (this.y > canvas.height) {
+            this.y = 0;
+            this.x = Math.random() * canvas.width;
+          }
+        }
+        
+        draw() {
+          ctx.beginPath();
+          const angle = Math.PI * 2 / this.points;
+          for (let i = 0; i < this.points; i++) {
+            const x = this.x + this.size * Math.cos(i * angle);
+            const y = this.y + this.size * Math.sin(i * angle);
+            ctx.lineTo(x, y);
+          }
+          ctx.closePath();
+          ctx.fillStyle = 'rgba(0, 153, 255, 0.8)'; // 蓝色
+          ctx.fill();
+        }
+      }
+      
+      // 创建雪花
+      const snowflakes = Array(100).fill().map(() => new Snowflake());
+      
+      // 动画循环
+      let animationFrameId;
+      function animate() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        snowflakes.forEach(snowflake => {
+          snowflake.update();
+          snowflake.draw();
+        });
+        animationFrameId = requestAnimationFrame(animate);
+      }
+      
+      animate();
+      
+      // 5秒后停止动画、隐藏canvas并显示logo
+      setTimeout(() => {
+        cancelAnimationFrame(animationFrameId);
+        canvas.style.display = 'none';
+        robotLogo.style.display = 'block';
+      }, 5000);
+    })();
+  </script>
 </div>

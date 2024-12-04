@@ -1,0 +1,69 @@
+<canvas id="snow"></canvas>
+<style>
+  canvas#snow {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+  }
+</style>
+<script>
+  (function() {
+    const canvas = document.getElementById('snow');
+    const ctx = canvas.getContext('2d');
+    
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    
+    const snowflakes = [];
+    const maxSnowflakes = 100;
+    
+    function createSnowflake() {
+      return {
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        radius: Math.random() * 3 + 1,
+        speed: Math.random() * 3 + 1,
+        wind: Math.random() * 0.5 - 0.25
+      };
+    }
+    
+    function init() {
+      for(let i = 0; i < maxSnowflakes; i++) {
+        snowflakes.push(createSnowflake());
+      }
+    }
+    
+    function update() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.fillStyle = 'white';
+      
+      snowflakes.forEach(flake => {
+        flake.y += flake.speed;
+        flake.x += flake.wind;
+        
+        if(flake.y > canvas.height) {
+          Object.assign(flake, createSnowflake());
+          flake.y = -5;
+        }
+        
+        ctx.beginPath();
+        ctx.arc(flake.x, flake.y, flake.radius, 0, Math.PI * 2);
+        ctx.fill();
+      });
+      
+      requestAnimationFrame(update);
+    }
+    
+    window.addEventListener('resize', () => {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    });
+    
+    init();
+    update();
+  })();
+</script> 

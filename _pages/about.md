@@ -3,10 +3,11 @@ layout: about
 title: about
 permalink: /
 subtitle: <a href='#'>Affiliations</a>. master student in Shanghai   University.
+enable_snow: true
 
 profile:
   align: right
-  image: prof_pic.jpg
+  image: _MG_6034.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
     <p>Email: ljm2022@shu.edu.cn</p>
