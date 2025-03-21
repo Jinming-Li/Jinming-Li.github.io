@@ -1,9 +1,39 @@
 ---
 layout: about
-title: about
+title: About
+show_papers: true  # 启用论文展示
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. master student in Shanghai   University.
-enable_snow: true
+subtitle: Research in Embodied Intelligence and Beyond
+
+# Embodied Intelligence Section
+embodied_ai: true
+embodied_ai_content: |
+  My research focuses on embodied intelligence, particularly in robotic manipulation, 
+  vision-language models for robotics, and foundation models in embodied AI.
+embodied_ai_papers: true
+
+# Computer Vision Section
+vision_research: true
+vision_content: |
+  Our research in computer vision focuses on developing advanced visual perception systems,
+  particularly in the areas of object detection, scene understanding, and visual reasoning.
+vision_papers: true
+
+# Point Cloud Section
+pointcloud_research: true
+pointcloud_content: |
+  We work on point cloud segmentation and processing, developing novel deep learning 
+  approaches for 3D scene understanding and object segmentation in point cloud data.
+pointcloud_papers: true
+
+# Other Research Section
+other_research: true
+other_research_content: |
+  Additional research interests include machine learning, computer vision, 
+  and artificial intelligence applications.
+other_papers: true
+
+# 其他配置...
 
 profile:
   align: right

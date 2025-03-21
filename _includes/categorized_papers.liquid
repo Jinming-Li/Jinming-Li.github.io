@@ -1,0 +1,17 @@
+{% assign categories = site.papers_categories %}
+{% for category in categories %}
+  {% assign category_papers = bibliography | where_exp: "item", "item.categories contains category.key" %}
+  {% if category_papers.size > 0 %}
+    <div class="category-section">
+      <h2>{{ category.name }}</h2>
+      {% if category.description %}
+        <div class="category-description">
+          {{ category.description }}
+        </div>
+      {% endif %}
+      <div class="publications">
+        {% bibliography -f papers -q @*[categories~={{ category.key }}]* %}
+      </div>
+    </div>
+  {% endif %}
+{% endfor %} 

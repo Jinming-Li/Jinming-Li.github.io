@@ -1,0 +1,25 @@
+@keyframes fire {
+  0% { text-shadow: 0 0 4px #fff, 0 -5px 4px #ff3, 2px -10px 6px #fd3, -2px -15px 11px #f80, 2px -25px 18px #f20; }
+  25% { text-shadow: 0 0 4px #fff, 2px -7px 4px #ff3, -2px -12px 6px #fd3, 2px -17px 11px #f80, -2px -27px 18px #f20; }
+  50% { text-shadow: 0 0 4px #fff, -2px -5px 4px #ff3, 2px -10px 6px #fd3, -2px -15px 11px #f80, 2px -25px 18px #f20; }
+  75% { text-shadow: 0 0 4px #fff, 2px -7px 4px #ff3, -2px -12px 6px #fd3, 2px -17px 11px #f80, -2px -27px 18px #f20; }
+  100% { text-shadow: 0 0 4px #fff, 0 -5px 4px #ff3, 2px -10px 6px #fd3, -2px -15px 11px #f80, 2px -25px 18px #f20; }
+}
+
+.fire-name {
+  position: relative;
+  color: #fff;
+  font-weight: bold;
+  animation: fire 3s ease-in-out infinite;
+  -webkit-animation: fire 3s ease-in-out infinite;
+  padding: 10px;
+  font-size: 2em;
+  display: inline-block;
+  text-shadow: 0 0 20px #fefcc9,
+               10px -10px 30px #feec85,
+               -20px -20px 40px #ffae34,
+               20px -40px 50px #ec760c,
+               -20px -60px 60px #cd4606,
+               0 -80px 70px #973716,
+               10px -90px 80px #451b0e;
+} 

@@ -7,10 +7,9 @@ layout: default
   <header class="post-header">
     <h1 class="post-title">
       {% if site.title == 'blank' %}
-        <span class="font-weight-bold">{{ site.first_name }}</span> {{ site.middle_name }}
-        {{ site.last_name }}
+        <span class="fire-name">{{ site.first_name }} {{ site.middle_name }} {{ site.last_name }}</span>
       {% else %}
-        {{ site.title }}
+        <span class="fire-name">{{ site.title }}</span>
       {% endif %}
     </h1>
     <p class="desc">{{ page.subtitle }}</p>
@@ -40,13 +39,59 @@ layout: default
       </div>
     {% endif %}
 
-    <div class="clearfix">{{ content }}</div>
+    <div class="clearfix">
+      <!-- 主要内容（自我介绍） -->
+      {{ content }}
+
+      <!-- 空行 -->
+      <div style="margin: 2rem 0;"></div>
+
+      <!-- Embodied Intelligence Section -->
+      {% if page.embodied_ai %}
+        <div class="section-block">
+          <h2>Embodied Intelligence Research</h2>
+          <div class="embodied-ai-content">
+            {{ page.embodied_ai_content }}
+          </div>
+          {% if page.embodied_ai_papers %}
+            <h3>Related Publications</h3>
+            {% include embodied_ai_papers.liquid %}
+          {% endif %}
+        </div>
+      {% endif %}
+
+      <!-- Computer Vision Section -->
+      {% if page.vision_research %}
+        <div class="section-block">
+          <h2>Computer Vision Research</h2>
+          <div class="vision-content">
+            {{ page.vision_content }}
+          </div>
+          {% if page.vision_papers %}
+            <h3>Related Publications</h3>
+            {% include vision_papers.liquid %}
+          {% endif %}
+        </div>
+      {% endif %}
+
+      <!-- Point Cloud Section -->
+      {% if page.pointcloud_research %}
+        <div class="section-block">
+          <h2>Point Cloud Segmentation</h2>
+          <div class="pointcloud-content">
+            {{ page.pointcloud_content }}
+          </div>
+          {% if page.pointcloud_papers %}
+            <h3>Related Publications</h3>
+            {% include pointcloud_papers.liquid %}
+          {% endif %}
+        </div>
+      {% endif %}
+    </div>
 
     <!-- News -->
     {% if page.news and site.announcements.enabled %}
-      <h2>
-        <a href="{{ '/news/' | relative_url }}" style="color: inherit">news</a>
-      </h2>
+      <h2><a href="{{ '/news/' | relative_url }}" style="color: inherit">news</a></h2>
       {% include news.liquid limit=true %}
     {% endif %}
 
@@ -59,18 +104,17 @@ layout: default
     {% endif %}
 
     <!-- Selected papers -->
-    {% if page.selected_papers %}
+    {% comment %} {% if page.selected_papers %}
       <h2>
         <a href="{{ '/publications/' | relative_url }}" style="color: inherit">selected publications</a>
       </h2>
       {% include selected_papers.liquid %}
-    {% endif %}
+    {% endif %} {% endcomment %}
 
     <!-- Social -->
     {% if page.social %}
       <div class="social">
         <div class="contact-icons">{% include social.liquid %}</div>
-
         <div class="contact-note">{{ site.contact_note }}</div>
       </div>
     {% endif %}
@@ -84,7 +128,6 @@ layout: default
     (function() {
       const canvas = document.getElementById('snow');
       const ctx = canvas.getContext('2d');
-      const robotLogo = document.getElementById('robot-logo');
       
       // 设置canvas尺寸为窗口大小
       function setCanvasSize() {
@@ -145,11 +188,10 @@ layout: default
       
       animate();
       
-      // 5秒后停止动画、隐藏canvas并显示logo
+      // 5秒后停止动画、隐藏canvas
       setTimeout(() => {
         cancelAnimationFrame(animationFrameId);
         canvas.style.display = 'none';
-        robotLogo.style.display = 'block';
       }, 5000);
     })();
   </script>

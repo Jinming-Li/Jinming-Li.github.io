@@ -649,3 +649,21 @@ jsonresume:
   - languages
   - interests
   - references
+
+# Paper categories configuration
+papers_categories:
+  - key: robotics
+    name: Robotics & Control
+    description: Research in robotic systems and control algorithms.
+  
+  - key: vision
+    name: Computer Vision
+    description: Work on visual perception and processing.
+    
+  - key: embodied-ai
+    name: Embodied Intelligence
+    description: Research in embodied AI and physical interaction.
+    
+  - key: ml
+    name: Machine Learning
+    description: General machine learning research.
