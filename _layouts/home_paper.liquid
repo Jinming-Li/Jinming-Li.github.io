@@ -1,6 +1,19 @@
 ---
 ---
 <div class="home-paper" id="home-{{ entry.key }}">
+  {% if entry.demo %}
+    {% include demo_video.liquid src=entry.demo title=entry.title caption=entry.demo_caption %}
+  {% elsif entry.preview contains '.mp4' %}
+    {% assign demo_src = entry.preview | prepend: '/assets/img/publication_preview/' | relative_url %}
+    {% include demo_video.liquid src=demo_src title=entry.title poster=entry.poster caption=entry.demo_caption %}
+  {% elsif entry.preview %}
+    <img
+      class="paper-figure"
+      src="{{ entry.preview | prepend: '/assets/img/publication_preview/' | relative_url }}"
+      alt="{{ entry.title | escape }} overview"
+      loading="lazy"
+    >
+  {% endif %}
   <div class="home-paper-meta">
     {% if entry.abbr %}{{ entry.abbr }} · {% elsif entry.journal %}{{ entry.journal }} · {% endif -%}
     {{- entry.year }}

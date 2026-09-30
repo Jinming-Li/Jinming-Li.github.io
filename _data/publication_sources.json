@@ -1,0 +1,80 @@
+{
+  "checked_on": "2026-09-30",
+  "scholar": "https://scholar.google.com/citations?user=kzgMk0gAAAAJ&hl=en",
+  "scholar_records": 14,
+  "unique_works": 13,
+  "notes": [
+    "DiffusionVLA preprint and ICML article are one work.",
+    "CoA-VLA publication year follows ICCV 2025 rather than the preprint year shown by Scholar.",
+    "HumanoidExo venue and year follow the project homepage (ICRA 2026); Scholar lists the 2025 preprint.",
+    "Depth-aware pretraining and DexVLA retain the author lists of the versions linked by Scholar.",
+    "Template example papers removed from the active bibliography; earlier Git commits preserve them."
+  ],
+  "sources": {
+    "zhong2026humanoidexo": {
+      "paper": "https://arxiv.org/abs/2510.03022",
+      "project": "https://humanoid-exo.github.io/",
+      "demo": "https://humanoid-exo.github.io/static/videos/task2_2.mp4"
+    },
+    "li2025coavla": {
+      "paper": "https://arxiv.org/abs/2412.20451",
+      "project": "https://chain-of-affordance.github.io/",
+      "demo": "https://chain-of-affordance.github.io/static/videos/origin_tasks/Prepare_tea_norm.mp4"
+    },
+    "wen2024tinyvlafastdataefficientvisionlanguageaction": {
+      "paper": "https://arxiv.org/abs/2409.12514",
+      "project": "https://tiny-vla.github.io",
+      "demo": "tinyvla.mp4"
+    },
+    "wen2025dexvla": {
+      "paper": "https://arxiv.org/abs/2502.05855",
+      "project": "https://dex-vla.github.io/",
+      "demo": "https://dex-vla.github.io/videos/fold_b.mp4"
+    },
+    "wen2025diffusionvla": {
+      "paper": "https://proceedings.mlr.press/v267/wen25g.html",
+      "project": "https://diffusion-vla.github.io/",
+      "demo": "https://diffusion-vla.github.io/static/videos/framework_gif.mp4"
+    },
+    "wu2025discretepolicy": {
+      "paper": "https://arxiv.org/abs/2409.18707",
+      "project": "https://discretepolicy.github.io/",
+      "demo": "discreteDP.mp4"
+    },
+    "zhu2024scalingdiffusionpolicytransformer": {
+      "paper": "https://arxiv.org/abs/2409.14411",
+      "project": "https://scaling-diffusion-policy.github.io",
+      "demo": "scaledp.mp4"
+    },
+    "zhu2025objectvla": {
+      "paper": "https://arxiv.org/abs/2502.19250",
+      "project": "https://objectvla.github.io/",
+      "demo": "https://objectvla.github.io/static/videos/bin-picking/bin-picking-ood.mp4"
+    },
+    "li2024mmromultimodalllmseligible": {
+      "paper": "https://arxiv.org/abs/2406.19693",
+      "project": "https://mm-robobench.github.io",
+      "demo": "robobench_method.jpg"
+    },
+    "wang2024depthaware": {
+      "paper": "https://arxiv.org/abs/2401.09038",
+      "project": null,
+      "demo": null
+    },
+    "wen2024objectcentricinstructionaugmentationrobotic": {
+      "paper": "https://arxiv.org/abs/2401.02814",
+      "project": "https://oci-robotics.github.io",
+      "demo": "oci.mp4"
+    },
+    "xu2024surveyroboticsfoundationmodels": {
+      "paper": "https://arxiv.org/abs/2402.02385",
+      "project": null,
+      "demo": null
+    },
+    "zhu2024languageconditionedroboticmanipulationfast": {
+      "paper": "https://arxiv.org/abs/2401.04181",
+      "project": "https://jlm-z.github.io/RSFT",
+      "demo": "rfst.mp4"
+    }
+  }
+}

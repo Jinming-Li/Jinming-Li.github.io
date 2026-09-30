@@ -1,0 +1,23 @@
+<figure class="robot-demo">
+  <video
+    {% if include.featured %}
+      data-preview="true"
+    {% endif %}
+    controls
+    muted
+    playsinline
+    loop
+    preload="metadata"
+    aria-label="{{ include.title | escape }} demonstration"
+    {% if include.poster %}
+      poster="{{ include.poster | prepend: '/assets/img/publication_preview/' | relative_url }}"
+    {% endif %}
+    style="display:block;width:100%;aspect-ratio:16/9;object-fit:contain;background:#101815;border-radius:6px"
+  >
+    <source src="{{ include.src }}#t=0.1" type="video/mp4">
+    Your browser does not support embedded video. <a href="{{ include.src }}">Open the demo</a>.
+  </video>
+  {% if include.caption %}
+    <figcaption>{{ include.caption }}</figcaption>
+  {% endif %}
+</figure>

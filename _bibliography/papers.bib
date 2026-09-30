@@ -1,142 +1,201 @@
 ---
 ---
 
-@string{aps = {American Physical Society,}}
+% Reconciled with https://scholar.google.com/citations?user=kzgMk0gAAAAJ on 2026-09-30.
+% Conference versions take precedence over duplicate preprints.
+
+@inproceedings{zhong2026humanoidexo,
+  title={HumanoidExo: Scalable Whole-Body Humanoid Manipulation via Wearable Exoskeleton},
+  author={Rui Zhong and Yizhe Sun and Junjie Wen and Jinming Li and Chuang Cheng and Wei Dai and Zhiwen Zeng and Huimin Lu and Yichen Zhu and Yi Xu},
+  year={2026},
+  abbr={ICRA},
+  booktitle={IEEE International Conference on Robotics and Automation},
+  url={https://arxiv.org/abs/2510.03022},
+  website={https://humanoid-exo.github.io/},
+  demo={https://humanoid-exo.github.io/static/videos/task2_2.mp4},
+  demo_caption={Autonomous walking and object placement over 2 m; project video shown at 3× speed.},
+  selected={true},
+  category={embodied-ai}
+}
+
+@inproceedings{li2025coavla,
+  title={CoA-VLA: Improving Vision-Language-Action Models via Visual-Textual Chain-of-Affordance},
+  author={Jinming Li and Yichen Zhu and Zhibin Tang and Junjie Wen and Minjie Zhu and Xiaoyu Liu and Chengmeng Li and Ran Cheng and Yaxin Peng and Yan Peng and Feifei Feng},
+  year={2025},
+  abbr={ICCV},
+  booktitle={Proceedings of the IEEE/CVF International Conference on Computer Vision},
+  url={https://arxiv.org/abs/2412.20451},
+  website={https://chain-of-affordance.github.io/},
+  demo={https://chain-of-affordance.github.io/static/videos/origin_tasks/Prepare_tea_norm.mp4},
+  demo_caption={Preparing tea with affordance-aware visual and textual reasoning.},
+  selected={true},
+  category={embodied-ai}
+}
 
 @misc{wen2024tinyvlafastdataefficientvisionlanguageaction,
-      abbr={arXiv},
-      title={TinyVLA: Towards Fast, Data-Efficient Vision-Language-Action Models for Robotic Manipulation}, 
-      author={Junjie Wen* and Yichen Zhu* and Jinming Li and Minjie Zhu and Kun Wu and Zhiyuan Xu and Ning Liu and Ran Cheng and Chaomin Shen and Yaxin Peng and Feifei Feng and Jian Tang},
-      year={2024},
-      eprint={2409.12514},
-      archivePrefix={arXiv},
-      code={https://github.com/lesjie-wen/tinyvla},
-      website={https://tiny-vla.github.io},
-      primaryClass={cs.RO},
-      video={https://x.com/chris_j_paxton/status/1838287784202690697},
-      url={https://arxiv.org/abs/2409.12514}, 
-      code={https://github.com/lesjie-wen/tinyvla},
-      highlight={true},
-      selected={true},
-      preview={tinyvla.mp4},
-      category={embodied-ai},
-      wechat_link={https://mp.weixin.qq.com/s/actual-link-here}
+  abbr={RA-L},
+  title={TinyVLA: Toward Fast, Data-Efficient Vision-Language-Action Models for Robotic Manipulation},
+  author={Junjie Wen and Yichen Zhu and Jinming Li and Minjie Zhu and Zhibin Tang and Kun Wu and Zhiyuan Xu and Ning Liu and Ran Cheng and Chaomin Shen and Yaxin Peng and Feifei Feng and Jian Tang},
+  year={2025},
+  eprint={2409.12514},
+  archivePrefix={arXiv},
+  code={https://github.com/liyaxuanliyaxuan/TinyVLA},
+  website={https://tiny-vla.github.io},
+  primaryClass={cs.RO},
+  video={https://x.com/chris_j_paxton/status/1838287784202690697},
+  url={https://arxiv.org/abs/2409.12514},
+  highlight={true},
+  selected={true},
+  preview={tinyvla.mp4},
+  category={embodied-ai},
+  journal={IEEE Robotics and Automation Letters},
+  demo_caption={Data-efficient vision-language-action learning for robotic manipulation.},
+  poster={tinyvla-poster.jpg}
+}
+
+@misc{wen2025dexvla,
+  title={DexVLA: Vision-Language Model with Plug-In Diffusion Expert for General Robot Control},
+  author={Junjie Wen and Yichen Zhu and Jinming Li and Zhibin Tang and Chaomin Shen and Feifei Feng},
+  year={2025},
+  abbr={arXiv},
+  url={https://arxiv.org/abs/2502.05855},
+  website={https://dex-vla.github.io/},
+  code={https://github.com/juruobenruo/DexVLA},
+  demo={https://dex-vla.github.io/videos/fold_b.mp4},
+  demo_caption={Laundry folding with a plug-in diffusion expert; project video shown at 4× speed.},
+  selected={true},
+  category={embodied-ai}
+}
+
+@inproceedings{wen2025diffusionvla,
+  title={DiffusionVLA: Scaling Robot Foundation Models via Unified Diffusion and Autoregression},
+  author={Junjie Wen and Yichen Zhu and Minjie Zhu and Zhibin Tang and Jinming Li and Zhongyi Zhou and Xiaoyu Liu and Chaomin Shen and Yaxin Peng and Feifei Feng},
+  year={2025},
+  abbr={ICML},
+  booktitle={Proceedings of the 42nd International Conference on Machine Learning},
+  url={https://proceedings.mlr.press/v267/wen25g.html},
+  website={https://diffusion-vla.github.io/},
+  code={https://github.com/ZEbirds/Dexvla},
+  demo={https://diffusion-vla.github.io/static/videos/framework_gif.mp4},
+  demo_caption={Self-generated reasoning coupled with diffusion-based action generation.},
+  selected={true},
+  category={embodied-ai}
+}
+
+@inproceedings{wu2025discretepolicy,
+  title={Discrete Policy: Learning Disentangled Action Space for Multi-Task Robotic Manipulation},
+  author={Kun Wu and Yichen Zhu and Jinming Li and Junjie Wen and Ning Liu and Zhiyuan Xu and Jian Tang},
+  year={2025},
+  abbr={ICRA},
+  booktitle={IEEE International Conference on Robotics and Automation},
+  url={https://arxiv.org/abs/2409.18707},
+  website={https://discretepolicy.github.io/},
+  preview={discreteDP.mp4},
+  poster={discreteDP-poster.jpg},
+  demo_caption={Multi-task robot manipulation with a discrete action representation.},
+  selected={true},
+  category={embodied-ai}
 }
 
 @misc{zhu2024scalingdiffusionpolicytransformer,
-      abbr={arXiv},
-      title={Scaling Diffusion Policy in Transformer to 1 Billion Parameters for Robotic Manipulation}, 
-      author={Minjie Zhu* and Yichen Zhu* and Jinming Li and Junjie Wen and Zhiyuan Xu and Ning Liu and Ran Cheng and Chaomin Shen and Yaxin Peng and Feifei Feng and Jian Tang},
-      year={2024},
-      eprint={2409.14411},
-      archivePrefix={arXiv},
-      primaryClass={cs.RO},
-      url={https://arxiv.org/abs/2409.14411}, 
-      selected={true},
-      preview={discreteDP.mp4},
-      website={https://scaling-diffusion-policy.github.io},
-      category={embodied-ai},
-      wechat_link={https://mp.weixin.qq.com/s/actual-link-here}
-}
-@misc{li2024mmromultimodalllmseligible,
-      abbr={arXiv},
-      title={MMRo: Are Multimodal LLMs Eligible as the Brain for In-Home Robotics?}, 
-      author={Jinming Li* and Yichen Zhu* and Zhiyuan Xu and Jindong Gu and Minjie Zhu and Xin Liu and Ning Liu and Yaxin Peng and Feifei Feng and Jian Tang},
-      year={2024},
-      eprint={2406.19693},
-      archivePrefix={arXiv},
-      primaryClass={cs.RO},
-      url={https://arxiv.org/abs/2406.19693},
-      website={https://mm-robobench.github.io},
-      selected={true},
-      preview={robobench_method.jpg},
-      category={embodied-ai},
-      wechat_link={https://mp.weixin.qq.com/s/actual-link-here}
-}
-@misc{wen2024objectcentricinstructionaugmentationrobotic,
-      abbr={ICRA},
-      title={Object-Centric Instruction Augmentation for Robotic Manipulation}, 
-      author={Junjie Wen* and Yichen Zhu* and Minjie Zhu and Jinming Li and Zhiyuan Xu and Zhengping Che and Chaomin Shen and Yaxin Peng and Dong Liu and Feifei Feng and Jian Tang},
-      year={2025},
-      eprint={2401.02814},
-      archivePrefix={arXiv},
-      primaryClass={cs.RO},
-      url={https://arxiv.org/abs/2401.02814}, 
-      selected={true},
-      preview={oci.mp4},
-      website={https://oci-robotics.github.io},
-      category={embodied-ai},
-      wechat_link={https://mp.weixin.qq.com/s/actual-link-here}
-}
-@misc{zhu2024languageconditionedroboticmanipulationfast,
-      abbr={ICRA},
-      title={Language-Conditioned Robotic Manipulation with Fast and Slow Thinking}, 
-      author={Minjie Zhu* and Yichen Zhu* and Jinming Li and Junjie Wen and Zhiyuan Xu and Zhengping Che and Chaomin Shen and Yaxin Peng and Dong Liu and Feifei Feng and Jian Tang},
-      year={2023},
-      eprint={2401.04181},
-      archivePrefix={arXiv},
-      primaryClass={cs.RO},
-      url={https://arxiv.org/abs/2401.04181}, 
-      selected={true},
-      preview={rfst.mp4},
-      website={https://jlm-z.github.io/RSFT},
-      category={embodied-ai},
-      wechat_link={https://mp.weixin.qq.com/s/actual-link-here}
-}
-@misc{xu2024surveyroboticsfoundationmodels,
-      abbr={arXiv},
-      title={A Survey on Robotics with Foundation Models: toward Embodied AI}, 
-      author={Zhiyuan Xu and Kun Wu and Junjie Wen and Jinming Li and Ning Liu and Zhengping Che and Jian Tang},
-      year={2025},
-      eprint={2402.02385},
-      archivePrefix={arXiv},
-      primaryClass={cs.RO},
-      url={https://arxiv.org/abs/2402.02385}, 
-      selected={true},
-      category={other},
-      categories={[robotics, vision]},
-      wechat_link={https://mp.weixin.qq.com/s/actual-link-here}
-}
-
-@article{example2023vision,
-  title={Computer Vision Paper},
-  author={Author, A.},
-  journal={Journal Name},
-  year={2023},
-  category={vision},
-  wechat_link={https://mp.weixin.qq.com/s/actual-link-here}
-}
-
-@article{example2023pointcloud,
-  title={Point Cloud Paper},
-  author={Author, B.},
-  journal={Journal Name},
-  year={2023},
-  category={pointcloud},
-  wechat_link={https://mp.weixin.qq.com/s/actual-link-here}
-}
-
-@article{liu2023embodied,
-  title={Embodied Intelligence Research},
-  author={Liu, J. and Peng, Y.},
-  journal={AI Journal},
-  year={2023},
+  abbr={ICRA},
+  title={Scaling Diffusion Policy in Transformer to 1 Billion Parameters for Robotic Manipulation},
+  author={Minjie Zhu* and Yichen Zhu* and Jinming Li and Junjie Wen and Zhiyuan Xu and Ning Liu and Ran Cheng and Chaomin Shen and Yaxin Peng and Feifei Feng and Jian Tang},
+  year={2025},
+  eprint={2409.14411},
+  archivePrefix={arXiv},
+  primaryClass={cs.RO},
+  url={https://arxiv.org/abs/2409.14411},
+  selected={true},
+  preview={scaledp.mp4},
+  website={https://scaling-diffusion-policy.github.io},
   category={embodied-ai},
-  wechat_link={https://mp.weixin.qq.com/s/actual-link-here}
+  demo_caption={Scaling transformer diffusion policies for robotic manipulation.},
+  poster={scaledp-poster.jpg}
 }
 
-@article{liu2023vision,
-  title={Computer Vision Research},
-  author={Liu, J. and Peng, Y.},
-  journal={Vision Journal},
-  year={2023},
-  category={vision},
-  wechat_link={https://mp.weixin.qq.com/s/actual-link-here}
+@misc{zhu2025objectvla,
+  title={ObjectVLA: End-to-End Open-World Object Manipulation Without Demonstration},
+  author={Minjie Zhu and Yichen Zhu and Jinming Li and Zhongyi Zhou and Junjie Wen and Xiaoyu Liu and Chaomin Shen and Yaxin Peng and Feifei Feng},
+  year={2025},
+  abbr={arXiv},
+  url={https://arxiv.org/abs/2502.19250},
+  website={https://objectvla.github.io/},
+  demo={https://objectvla.github.io/static/videos/bin-picking/bin-picking-ood.mp4},
+  demo_caption={Pick-and-place generalization to unseen objects; project video shown at 2× speed.},
+  selected={true},
+  category={embodied-ai}
 }
 
+@misc{li2024mmromultimodalllmseligible,
+  abbr={arXiv},
+  title={MMRo: Are Multimodal LLMs Eligible as the Brain for In-Home Robotics?},
+  author={Jinming Li* and Yichen Zhu* and Zhiyuan Xu and Jindong Gu and Minjie Zhu and Xin Liu and Ning Liu and Yaxin Peng and Feifei Feng and Jian Tang},
+  year={2024},
+  eprint={2406.19693},
+  archivePrefix={arXiv},
+  primaryClass={cs.RO},
+  url={https://arxiv.org/abs/2406.19693},
+  website={https://mm-robobench.github.io},
+  selected={true},
+  preview={robobench_method.jpg},
+  category={embodied-ai}
+}
 
+@misc{wang2024depthaware,
+  title={Visual Robotic Manipulation with Depth-Aware Pretraining},
+  author={Wanying Wang and Jinming Li and Yichen Zhu and Zhiyuan Xu and Zhengping Che and Yaxin Peng and Chaomin Shen and Dong Liu and Feifei Feng and Jian Tang},
+  year={2024},
+  abbr={arXiv},
+  url={https://arxiv.org/abs/2401.09038},
+  selected={true},
+  category={embodied-ai}
+}
 
+@misc{wen2024objectcentricinstructionaugmentationrobotic,
+  abbr={ICRA},
+  title={Object-Centric Instruction Augmentation for Robotic Manipulation},
+  author={Junjie Wen* and Yichen Zhu* and Minjie Zhu and Jinming Li and Zhiyuan Xu and Zhengping Che and Chaomin Shen and Yaxin Peng and Dong Liu and Feifei Feng and Jian Tang},
+  year={2024},
+  eprint={2401.02814},
+  archivePrefix={arXiv},
+  primaryClass={cs.RO},
+  url={https://arxiv.org/abs/2401.02814},
+  selected={true},
+  preview={oci.mp4},
+  website={https://oci-robotics.github.io},
+  category={embodied-ai},
+  demo_caption={Object-centric instructions for robot manipulation.},
+  poster={oci-poster.jpg}
+}
 
+@misc{xu2024surveyroboticsfoundationmodels,
+  abbr={arXiv},
+  title={A Survey on Robotics with Foundation Models: toward Embodied AI},
+  author={Zhiyuan Xu and Kun Wu and Junjie Wen and Jinming Li and Ning Liu and Zhengping Che and Jian Tang},
+  year={2024},
+  eprint={2402.02385},
+  archivePrefix={arXiv},
+  primaryClass={cs.RO},
+  url={https://arxiv.org/abs/2402.02385},
+  selected={true},
+  category={embodied-ai},
+  categories={[robotics, vision]}
+}
 
-
-
+@misc{zhu2024languageconditionedroboticmanipulationfast,
+  abbr={ICRA},
+  title={Language-Conditioned Robotic Manipulation with Fast and Slow Thinking},
+  author={Minjie Zhu* and Yichen Zhu* and Jinming Li and Junjie Wen and Zhiyuan Xu and Zhengping Che and Chaomin Shen and Yaxin Peng and Dong Liu and Feifei Feng and Jian Tang},
+  year={2024},
+  eprint={2401.04181},
+  archivePrefix={arXiv},
+  primaryClass={cs.RO},
+  url={https://arxiv.org/abs/2401.04181},
+  selected={true},
+  preview={rfst.mp4},
+  website={https://jlm-z.github.io/RSFT},
+  category={embodied-ai},
+  demo_caption={Language-conditioned manipulation with fast and slow thinking.},
+  poster={rfst-poster.jpg}
+}

@@ -17,7 +17,7 @@ layout: default
       <p class="hero-subtitle">{{ page.subtitle }}</p>
       <div class="hero-bio">{{ content }}</div>
       <div class="hero-actions">
-        <a class="home-button primary" href="#research">Explore research <span aria-hidden="true">↗</span></a>
+        <a class="home-button primary" href="#demos">Watch robot demos <span aria-hidden="true">↗</span></a>
         {% if site.email -%}
           <a class="home-button" href="mailto:{{ site.email }}">Get in touch <span aria-hidden="true">↗</span></a>
         {%- endif %}
@@ -38,79 +38,37 @@ layout: default
     {% endif %}
   </header>
 
-  <nav class="research-nav" aria-label="Research topics">
-    <span class="nav-label">RESEARCH AREAS</span>
-    {% if page.embodied_ai -%}
-      <a href="#embodied-ai">Embodied intelligence <span aria-hidden="true">↗</span></a>
-    {%- endif %}
-    {% if page.vision_research -%}
-      <a href="#computer-vision">Computer vision <span aria-hidden="true">↗</span></a>
-    {%- endif %}
-    {% if page.pointcloud_research -%}
-      <a href="#point-cloud">3D perception <span aria-hidden="true">↗</span></a>
-    {%- endif %}
-  </nav>
-
+  <section id="demos" class="demo-section" aria-labelledby="demo-title">
+    <div class="demo-heading">
+      <div>
+        <p class="home-eyebrow">EMBODIED INTELLIGENCE / IN ACTION</p>
+        <h2 id="demo-title">Robots learning to act.</h2>
+      </div>
+      <a href="#research">All publications ↓</a>
+    </div>
+    <p class="demo-intro">From affordance-aware manipulation to humanoid whole-body control. Watch the robots in action.</p>
+    <div class="featured-demos">
+      {% for item in site.data.featured_demos %}
+        <article class="featured-demo">
+          {% include demo_video.liquid src=item.src title=item.title caption=item.caption featured=true %}
+          <div class="demo-card-copy">
+            <span class="home-paper-meta">{{ item.venue }}</span>
+            <h3>{{ item.title }}</h3>
+            <p>{{ item.description }}</p>
+            <a href="{{ item.project }}">Explore project ↗</a>
+          </div>
+        </article>
+      {% endfor %}
+    </div>
+  </section>
   <article id="research">
     <div class="research-heading">
       <p class="home-eyebrow">RESEARCH & PUBLICATIONS</p>
       <h2>From perception to action.</h2>
-      <p>Exploring how intelligent systems see, understand, and interact with the world.</p>
+      <p>Vision-language-action models, diffusion policies, and robotic manipulation.</p>
+      <a href="https://scholar.google.com/citations?user=kzgMk0gAAAAJ&amp;hl=en">Google Scholar ↗</a>
     </div>
-    {% if page.embodied_ai %}
-      <section class="research-section" id="embodied-ai" aria-labelledby="embodied-title">
-        <div class="research-intro">
-          <span class="research-number">01 /</span>
-          <h3 id="embodied-title">
-            Embodied <br>
-            intelligence
-          </h3>
-          <p>{{ page.embodied_ai_content }}</p>
-          <span class="research-tag">Robotic manipulation</span><span class="research-tag">Foundation models</span>
-        </div>
-        <div class="research-papers">
-          {% if page.embodied_ai_papers %}
-            <h4>Related publications</h4>
-            {% include embodied_ai_papers.liquid -%}
-          {%- endif %}
-        </div>
-      </section>
-    {% endif %}
-    {% if page.vision_research %}
-      <section class="research-section" id="computer-vision" aria-labelledby="vision-title">
-        <div class="research-intro">
-          <span class="research-number">02 /</span>
-          <h3 id="vision-title">
-            Computer <br>
-            vision
-          </h3>
-          <p>{{ page.vision_content }}</p>
-          <span class="research-tag">Scene understanding</span><span class="research-tag">Visual reasoning</span>
-        </div>
-        <div class="research-papers">
-          {% if page.vision_papers %}
-            <h4>Related publications</h4>
-            {% include vision_papers.liquid -%}
-          {%- endif %}
-        </div>
-      </section>
-    {% endif %}
-    {% if page.pointcloud_research %}
-      <section class="research-section" id="point-cloud" aria-labelledby="pointcloud-title">
-        <div class="research-intro">
-          <span class="research-number">03 /</span>
-          <h3 id="pointcloud-title">3D perception</h3>
-          <p>{{ page.pointcloud_content }}</p>
-          <span class="research-tag">Point clouds</span><span class="research-tag">Segmentation</span>
-        </div>
-        <div class="research-papers">
-          {% if page.pointcloud_papers %}
-            <h4>Related publications</h4>
-            {% include pointcloud_papers.liquid -%}
-          {%- endif %}
-        </div>
-      </section>
-    {% endif %}
+    {% include embodied_ai_papers.liquid %}
 
     {% if page.news and site.announcements.enabled %}
       <section class="home-updates">
@@ -164,3 +122,5 @@ layout: default
     {% if site.newsletter.enabled and site.footer_fixed %}{% include scripts/newsletter.liquid center=true %}{% endif %}
   </article>
 </div>
+
+<script src="{{ "/assets/js/robot-demos.js" | relative_url }}" defer></script>

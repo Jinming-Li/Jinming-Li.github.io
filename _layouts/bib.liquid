@@ -1,4 +1,3 @@
-
 <div class="row">
   {% if site.enable_publication_thumbnails %}
     <div class="col col-sm-2 abbr">
@@ -24,8 +23,13 @@
           <abbr class="badge rounded w-100">{{ entry.abbr }}</abbr>
         {% endif %}
       {% endif %}
-      {% if entry.preview %}
-        {% if entry.preview contains '://' %}
+      {% if entry.demo %}
+        {% include demo_video.liquid src=entry.demo title=entry.title %}
+      {% elsif entry.preview %}
+        {% if entry.preview contains '.mp4' %}
+          {% assign demo_src = entry.preview | prepend: '/assets/img/publication_preview/' | relative_url %}
+          {% include demo_video.liquid src=demo_src title=entry.title poster=entry.poster %}
+        {% elsif entry.preview contains '://' %}
           <img class="preview z-depth-1 rounded" src="{{ entry.preview }}">
         {% else %}
           {% assign entry_path = entry.preview | prepend: '/assets/img/publication_preview/' %}
@@ -185,63 +189,52 @@
     <div class="links">
       {% if entry.award %}
         <a class="award btn btn-sm z-depth-0" role="button">
-          <i class="fas fa-award"></i> {%- if entry.award_name %}{{ entry.award_name }}{% else %}Awarded{% endif -%}
+          <i class="fas fa-award"></i>
+          {%- if entry.award_name %}{{ entry.award_name }}{% else %}Awarded{% endif -%}
         </a>
       {% endif %}
       {% if entry.abstract %}
-        <a class="abstract btn btn-sm z-depth-0" role="button">
-          <i class="fas fa-align-left"></i> Abstract
-        </a>
+        <a class="abstract btn btn-sm z-depth-0" role="button"> <i class="fas fa-align-left"></i> Abstract </a>
       {% endif %}
       {% if entry.doi %}
-        <a href="https://doi.org/{{ entry.doi }}" class="btn btn-sm z-depth-0" role="button">
-          <i class="fas fa-external-link-alt"></i> Doi
-        </a>
+        <a href="https://doi.org/{{ entry.doi }}" class="btn btn-sm z-depth-0" role="button"> <i class="fas fa-external-link-alt"></i> Doi </a>
       {% endif %}
       {% if entry.arxiv %}
-        <a href="http://arxiv.org/abs/{{ entry.arxiv }}" class="btn btn-sm z-depth-0" role="button">
-          <i class="fas fa-archive"></i> arXiv
-        </a>
+        <a href="http://arxiv.org/abs/{{ entry.arxiv }}" class="btn btn-sm z-depth-0" role="button"> <i class="fas fa-archive"></i> arXiv </a>
       {% endif %}
       {% if entry.bibtex_show %}
-        <a class="bibtex btn btn-sm z-depth-0" role="button">
-          <i class="fas fa-quote-right"></i> Bibtex
-        </a>
+        <a class="bibtex btn btn-sm z-depth-0" role="button"> <i class="fas fa-quote-right"></i> Bibtex </a>
       {% endif %}
       {% if entry.html %}
-        <a href="{{ entry.html | relative_url }}" class="btn btn-sm z-depth-0" role="button">
-          <i class="fas fa-code"></i> Html
-        </a>
+        <a href="{{ entry.html | relative_url }}" class="btn btn-sm z-depth-0" role="button"> <i class="fas fa-code"></i> Html </a>
       {% endif %}
       {% if entry.pdf %}
-        <a href="{{ entry.pdf | relative_url }}" class="btn btn-sm z-depth-0" role="button">
-          <i class="fas fa-file-pdf"></i> Pdf
-        </a>
+        <a href="{{ entry.pdf | relative_url }}" class="btn btn-sm z-depth-0" role="button"> <i class="fas fa-file-pdf"></i> Pdf </a>
       {% endif %}
       {% if entry.video %}
-        <a {% if site.enable_video_embedding %}class="abstract"{% else %}href="{{ entry.video }}"{% endif %} class="btn btn-sm z-depth-0" role="button">
+        <a
+          {% if site.enable_video_embedding %}
+            class="abstract"
+          {% else %}
+            href="{{ entry.video }}"
+          {% endif %}
+          class="btn btn-sm z-depth-0"
+          role="button"
+        >
           <i class="fas fa-video"></i> Video
         </a>
       {% endif %}
       {% if entry.code %}
-        <a href="{{ entry.code }}" class="btn btn-sm z-depth-0" role="button">
-          <i class="fab fa-github"></i> Code
-        </a>
+        <a href="{{ entry.code }}" class="btn btn-sm z-depth-0" role="button"> <i class="fab fa-github"></i> Code </a>
       {% endif %}
       {% if entry.poster %}
-        <a href="{{ entry.poster | relative_url }}" class="btn btn-sm z-depth-0" role="button">
-          <i class="fas fa-image"></i> Poster
-        </a>
+        <a href="{{ entry.poster | relative_url }}" class="btn btn-sm z-depth-0" role="button"> <i class="fas fa-image"></i> Poster </a>
       {% endif %}
       {% if entry.slides %}
-        <a href="{{ entry.slides | relative_url }}" class="btn btn-sm z-depth-0" role="button">
-          <i class="fas fa-desktop"></i> Slides
-        </a>
+        <a href="{{ entry.slides | relative_url }}" class="btn btn-sm z-depth-0" role="button"> <i class="fas fa-desktop"></i> Slides </a>
       {% endif %}
       {% if entry.website %}
-        <a href="{{ entry.website }}" class="btn btn-sm z-depth-0" role="button">
-          <i class="fas fa-globe"></i> Website
-        </a>
+        <a href="{{ entry.website }}" class="btn btn-sm z-depth-0" role="button"> <i class="fas fa-globe"></i> Website </a>
       {% endif %}
     </div>
     {% if site.enable_publication_badges %}
@@ -348,7 +341,7 @@
       <div class="bibtex hidden">
         {% highlight bibtex %}
         {{- entry.bibtex | hideCustomBibtex -}}
-        {% endhighlight %}
+      {% endhighlight %}
       </div>
     {% endif %}
 
