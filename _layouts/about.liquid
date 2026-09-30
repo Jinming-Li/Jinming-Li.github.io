@@ -87,6 +87,24 @@ layout: default
           {% endif %}
         </div>
       {% endif %}
+
+      <!-- WeChat Section -->
+      {% if page.wechat %}
+        <div class="section-block wechat-section">
+          <h2>
+            <i class="fas fa-weixin"></i> WeChat Official Account
+          </h2>
+          <div class="wechat-content">
+            {{ page.wechat_content }}
+            <div class="wechat-qr">
+              <a href="{{ page.wechat_url }}" target="_blank">
+                {% assign wechat_qr_path = page.wechat_qr | prepend: 'assets/img/' %}
+                <img src="{{ wechat_qr_path | relative_url }}" alt="WeChat QR Code" class="img-fluid">
+              </a>
+            </div>
+          </div>
+        </div>
+      {% endif %}
     </div>
 
     <!-- News -->

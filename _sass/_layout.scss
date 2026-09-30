@@ -147,3 +147,129 @@ body.sticky-bottom-footer {
     }
   }
 }
+
+.wechat-section {
+  background: linear-gradient(145deg, #f8f9fa, #ffffff);
+  border: 1px solid #e9ecef;
+  border-radius: 15px;
+  padding: 2.5rem;
+  margin: 2.5rem 0;
+  text-align: center;
+  
+  h2 {
+    color: #07C160;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    
+    i {
+      margin-right: 0.5rem;
+      animation: bounce 2s infinite;
+    }
+  }
+  
+  .wechat-content {
+    max-width: 600px;
+    margin: 0 auto;
+    
+    p {
+      margin-bottom: 1.5rem;
+      font-size: 1.1rem;
+      line-height: 1.8;
+      color: #666;
+    }
+  }
+  
+  .wechat-qr {
+    max-width: 180px;
+    margin: 2rem auto;
+    padding: 10px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    }
+    
+    img {
+      border-radius: 8px;
+      width: 100%;
+    }
+  }
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+.paper-entry {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  background-color: var(--global-bg-color);
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: rgba(0, 153, 255, 0.1);
+  }
+
+  .paper-info {
+    flex: 1;
+    padding-right: 1rem;
+    position: relative;
+  }
+
+  .wechat-link {
+    display: inline-flex;
+    align-items: center;
+    margin-left: 8px;
+    padding: 4px 8px;
+    border-radius: 4px;
+    background-color: #07C160;
+    color: white;
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    
+    i {
+      margin-right: 4px;
+    }
+    
+    &:hover {
+      background-color: #06ae56;
+      transform: translateY(-1px);
+    }
+  }
+}
+
+// 为参考文献中的链接添加样式
+.bibliography {
+  .links {
+    margin-top: 0.5rem;
+    
+    a {
+      display: inline-flex;
+      align-items: center;
+      margin-right: 8px;
+      padding: 4px 8px;
+      border-radius: 4px;
+      font-size: 0.9rem;
+      text-decoration: none;
+      
+      &.wechat-link {
+        background-color: #07C160;
+        color: white;
+        
+        &:hover {
+          background-color: #06ae56;
+        }
+      }
+    }
+  }
+}
