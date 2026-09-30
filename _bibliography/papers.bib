@@ -3,6 +3,7 @@
 
 % Reconciled with https://scholar.google.com/citations?user=kzgMk0gAAAAJ on 2026-09-30.
 % Conference versions take precedence over duplicate preprints.
+% Publication venues verified against publisher records on 2026-10-01.
 
 @inproceedings{zhong2026humanoidexo,
   title={HumanoidExo: Scalable Whole-Body Humanoid Manipulation via Wearable Exoskeleton},
@@ -19,20 +20,22 @@
 }
 
 @inproceedings{li2025coavla,
-  title={CoA-VLA: Improving Vision-Language-Action Models via Visual-Textual Chain-of-Affordance},
+  title={CoA-VLA: Improving Vision-Language-Action Models via Visual-Text Chain-of-Affordance},
   author={Jinming Li and Yichen Zhu and Zhibin Tang and Junjie Wen and Minjie Zhu and Xiaoyu Liu and Chengmeng Li and Ran Cheng and Yaxin Peng and Yan Peng and Feifei Feng},
   year={2025},
   abbr={ICCV},
   booktitle={Proceedings of the IEEE/CVF International Conference on Computer Vision},
-  url={https://arxiv.org/abs/2412.20451},
+  url={https://openaccess.thecvf.com/content/ICCV2025/html/Li_CoA-VLA_Improving_Vision-Language-Action_Models_via_Visual-Text_Chain-of-Affordance_ICCV_2025_paper.html},
   website={https://chain-of-affordance.github.io/},
   demo={https://chain-of-affordance.github.io/static/videos/origin_tasks/Prepare_tea_norm.mp4},
   demo_caption={Preparing tea with affordance-aware visual and textual reasoning.},
   selected={true},
-  category={embodied-ai}
+  category={embodied-ai},
+  pages={9759--9769},
+  arxiv={2412.20451}
 }
 
-@misc{wen2024tinyvlafastdataefficientvisionlanguageaction,
+@article{wen2024tinyvlafastdataefficientvisionlanguageaction,
   abbr={RA-L},
   title={TinyVLA: Toward Fast, Data-Efficient Vision-Language-Action Models for Robotic Manipulation},
   author={Junjie Wen and Yichen Zhu and Jinming Li and Minjie Zhu and Zhibin Tang and Kun Wu and Zhiyuan Xu and Ning Liu and Ran Cheng and Chaomin Shen and Yaxin Peng and Feifei Feng and Jian Tang},
@@ -43,28 +46,38 @@
   website={https://tiny-vla.github.io},
   primaryClass={cs.RO},
   video={https://x.com/chris_j_paxton/status/1838287784202690697},
-  url={https://arxiv.org/abs/2409.12514},
+  url={https://doi.org/10.1109/lra.2025.3544909},
   highlight={true},
   selected={true},
   preview={tinyvla.mp4},
   category={embodied-ai},
   journal={IEEE Robotics and Automation Letters},
   demo_caption={Data-efficient vision-language-action learning for robotic manipulation.},
-  poster={tinyvla-poster.jpg}
+  poster={tinyvla-poster.jpg},
+  doi={10.1109/lra.2025.3544909},
+  pages={3988--3995},
+  volume={10},
+  number={4},
+  arxiv={2409.12514}
 }
 
-@misc{wen2025dexvla,
+@inproceedings{wen2025dexvla,
   title={DexVLA: Vision-Language Model with Plug-In Diffusion Expert for General Robot Control},
   author={Junjie Wen and Yichen Zhu and Jinming Li and Zhibin Tang and Chaomin Shen and Feifei Feng},
   year={2025},
-  abbr={arXiv},
-  url={https://arxiv.org/abs/2502.05855},
+  abbr={CoRL},
+  url={https://proceedings.mlr.press/v305/wen25b.html},
   website={https://dex-vla.github.io/},
   code={https://github.com/juruobenruo/DexVLA},
   demo={https://dex-vla.github.io/videos/fold_b.mp4},
   demo_caption={Laundry folding with a plug-in diffusion expert; project video shown at 4× speed.},
   selected={true},
-  category={embodied-ai}
+  category={embodied-ai},
+  booktitle={Proceedings of The 9th Conference on Robot Learning},
+  pages={3094--3114},
+  volume={305},
+  publisher={PMLR},
+  arxiv={2502.05855}
 }
 
 @inproceedings{wen2025diffusionvla,
@@ -87,17 +100,20 @@
   author={Kun Wu and Yichen Zhu and Jinming Li and Junjie Wen and Ning Liu and Zhiyuan Xu and Jian Tang},
   year={2025},
   abbr={ICRA},
-  booktitle={IEEE International Conference on Robotics and Automation},
-  url={https://arxiv.org/abs/2409.18707},
+  booktitle={2025 IEEE International Conference on Robotics and Automation (ICRA)},
+  url={https://doi.org/10.1109/icra55743.2025.11127630},
   website={https://discretepolicy.github.io/},
   preview={discreteDP.mp4},
   poster={discreteDP-poster.jpg},
   demo_caption={Multi-task robot manipulation with a discrete action representation.},
   selected={true},
-  category={embodied-ai}
+  category={embodied-ai},
+  doi={10.1109/icra55743.2025.11127630},
+  pages={8811--8818},
+  arxiv={2409.18707}
 }
 
-@misc{zhu2024scalingdiffusionpolicytransformer,
+@inproceedings{zhu2024scalingdiffusionpolicytransformer,
   abbr={ICRA},
   title={Scaling Diffusion Policy in Transformer to 1 Billion Parameters for Robotic Manipulation},
   author={Minjie Zhu* and Yichen Zhu* and Jinming Li and Junjie Wen and Zhiyuan Xu and Ning Liu and Ran Cheng and Chaomin Shen and Yaxin Peng and Feifei Feng and Jian Tang},
@@ -105,13 +121,17 @@
   eprint={2409.14411},
   archivePrefix={arXiv},
   primaryClass={cs.RO},
-  url={https://arxiv.org/abs/2409.14411},
+  url={https://doi.org/10.1109/icra55743.2025.11128074},
   selected={true},
   preview={scaledp.mp4},
   website={https://scaling-diffusion-policy.github.io},
   category={embodied-ai},
   demo_caption={Scaling transformer diffusion policies for robotic manipulation.},
-  poster={scaledp-poster.jpg}
+  poster={scaledp-poster.jpg},
+  doi={10.1109/icra55743.2025.11128074},
+  pages={10838--10845},
+  booktitle={2025 IEEE International Conference on Robotics and Automation (ICRA)},
+  arxiv={2409.14411}
 }
 
 @misc{zhu2025objectvla,
@@ -142,17 +162,21 @@
   category={embodied-ai}
 }
 
-@misc{wang2024depthaware,
+@inproceedings{wang2024depthaware,
   title={Visual Robotic Manipulation with Depth-Aware Pretraining},
-  author={Wanying Wang and Jinming Li and Yichen Zhu and Zhiyuan Xu and Zhengping Che and Yaxin Peng and Chaomin Shen and Dong Liu and Feifei Feng and Jian Tang},
+  author={Jinming Li and Wanying Wang and Yaxin Peng and Chaomin Shen and Yichen Zhu and Zhiyuan Xu},
   year={2024},
-  abbr={arXiv},
-  url={https://arxiv.org/abs/2401.09038},
+  abbr={ROBIO},
+  url={https://doi.org/10.1109/robio64047.2024.10907650},
   selected={true},
-  category={embodied-ai}
+  category={embodied-ai},
+  doi={10.1109/robio64047.2024.10907650},
+  pages={843--850},
+  booktitle={2024 IEEE International Conference on Robotics and Biomimetics (ROBIO)},
+  arxiv={2401.09038}
 }
 
-@misc{wen2024objectcentricinstructionaugmentationrobotic,
+@inproceedings{wen2024objectcentricinstructionaugmentationrobotic,
   abbr={ICRA},
   title={Object-Centric Instruction Augmentation for Robotic Manipulation},
   author={Junjie Wen* and Yichen Zhu* and Minjie Zhu and Jinming Li and Zhiyuan Xu and Zhengping Che and Chaomin Shen and Yaxin Peng and Dong Liu and Feifei Feng and Jian Tang},
@@ -160,13 +184,17 @@
   eprint={2401.02814},
   archivePrefix={arXiv},
   primaryClass={cs.RO},
-  url={https://arxiv.org/abs/2401.02814},
+  url={https://doi.org/10.1109/icra57147.2024.10609992},
   selected={true},
   preview={oci.mp4},
   website={https://oci-robotics.github.io},
   category={embodied-ai},
   demo_caption={Object-centric instructions for robot manipulation.},
-  poster={oci-poster.jpg}
+  poster={oci-poster.jpg},
+  doi={10.1109/icra57147.2024.10609992},
+  pages={4318--4325},
+  booktitle={2024 IEEE International Conference on Robotics and Automation (ICRA)},
+  arxiv={2401.02814}
 }
 
 @misc{xu2024surveyroboticsfoundationmodels,
@@ -183,7 +211,7 @@
   categories={[robotics, vision]}
 }
 
-@misc{zhu2024languageconditionedroboticmanipulationfast,
+@inproceedings{zhu2024languageconditionedroboticmanipulationfast,
   abbr={ICRA},
   title={Language-Conditioned Robotic Manipulation with Fast and Slow Thinking},
   author={Minjie Zhu* and Yichen Zhu* and Jinming Li and Junjie Wen and Zhiyuan Xu and Zhengping Che and Chaomin Shen and Yaxin Peng and Dong Liu and Feifei Feng and Jian Tang},
@@ -191,11 +219,15 @@
   eprint={2401.04181},
   archivePrefix={arXiv},
   primaryClass={cs.RO},
-  url={https://arxiv.org/abs/2401.04181},
+  url={https://doi.org/10.1109/icra57147.2024.10611525},
   selected={true},
   preview={rfst.mp4},
   website={https://jlm-z.github.io/RSFT},
   category={embodied-ai},
   demo_caption={Language-conditioned manipulation with fast and slow thinking.},
-  poster={rfst-poster.jpg}
+  poster={rfst-poster.jpg},
+  doi={10.1109/icra57147.2024.10611525},
+  pages={4333--4339},
+  booktitle={2024 IEEE International Conference on Robotics and Automation (ICRA)},
+  arxiv={2401.04181}
 }

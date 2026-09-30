@@ -1,5 +1,5 @@
 {
-  "checked_on": "2026-09-30",
+  "checked_on": "2026-10-01",
   "scholar": "https://scholar.google.com/citations?user=kzgMk0gAAAAJ&hl=en",
   "scholar_records": 14,
   "unique_works": 13,
@@ -7,8 +7,10 @@
     "DiffusionVLA preprint and ICML article are one work.",
     "CoA-VLA publication year follows ICCV 2025 rather than the preprint year shown by Scholar.",
     "HumanoidExo venue and year follow the project homepage (ICRA 2026); Scholar lists the 2025 preprint.",
-    "Depth-aware pretraining and DexVLA retain the author lists of the versions linked by Scholar.",
-    "Template example papers removed from the active bibliography; earlier Git commits preserve them."
+    "Template example papers removed from the active bibliography; earlier Git commits preserve them.",
+    "Published versions take precedence over preprints; publisher-deposited Crossref metadata used for IEEE publications.",
+    "Depth-aware pretraining uses the ROBIO 2024 six-author published version, with Jinming Li first. DexVLA uses the six-author CoRL 2025 proceedings version.",
+    "ObjectVLA, MMRo, and the foundation-model survey have no confirmed venue in the public sources checked; arXiv labels do not imply rejection."
   ],
   "sources": {
     "zhong2026humanoidexo": {
@@ -17,19 +19,23 @@
       "demo": "https://humanoid-exo.github.io/static/videos/task2_2.mp4"
     },
     "li2025coavla": {
-      "paper": "https://arxiv.org/abs/2412.20451",
+      "paper": "https://openaccess.thecvf.com/content/ICCV2025/html/Li_CoA-VLA_Improving_Vision-Language-Action_Models_via_Visual-Text_Chain-of-Affordance_ICCV_2025_paper.html",
       "project": "https://chain-of-affordance.github.io/",
-      "demo": "https://chain-of-affordance.github.io/static/videos/origin_tasks/Prepare_tea_norm.mp4"
+      "demo": "https://chain-of-affordance.github.io/static/videos/origin_tasks/Prepare_tea_norm.mp4",
+      "publication_record": "https://openaccess.thecvf.com/content/ICCV2025/html/Li_CoA-VLA_Improving_Vision-Language-Action_Models_via_Visual-Text_Chain-of-Affordance_ICCV_2025_paper.html"
     },
     "wen2024tinyvlafastdataefficientvisionlanguageaction": {
-      "paper": "https://arxiv.org/abs/2409.12514",
+      "paper": "https://doi.org/10.1109/lra.2025.3544909",
       "project": "https://tiny-vla.github.io",
-      "demo": "tinyvla.mp4"
+      "demo": "tinyvla.mp4",
+      "publication_record": "https://doi.org/10.1109/lra.2025.3544909",
+      "metadata": "https://api.crossref.org/works/10.1109/lra.2025.3544909"
     },
     "wen2025dexvla": {
-      "paper": "https://arxiv.org/abs/2502.05855",
+      "paper": "https://proceedings.mlr.press/v305/wen25b.html",
       "project": "https://dex-vla.github.io/",
-      "demo": "https://dex-vla.github.io/videos/fold_b.mp4"
+      "demo": "https://dex-vla.github.io/videos/fold_b.mp4",
+      "publication_record": "https://proceedings.mlr.press/v305/wen25b.html"
     },
     "wen2025diffusionvla": {
       "paper": "https://proceedings.mlr.press/v267/wen25g.html",
@@ -37,14 +43,18 @@
       "demo": "https://diffusion-vla.github.io/static/videos/framework_gif.mp4"
     },
     "wu2025discretepolicy": {
-      "paper": "https://arxiv.org/abs/2409.18707",
+      "paper": "https://doi.org/10.1109/icra55743.2025.11127630",
       "project": "https://discretepolicy.github.io/",
-      "demo": "discreteDP.mp4"
+      "demo": "discreteDP.mp4",
+      "publication_record": "https://doi.org/10.1109/icra55743.2025.11127630",
+      "metadata": "https://api.crossref.org/works/10.1109/icra55743.2025.11127630"
     },
     "zhu2024scalingdiffusionpolicytransformer": {
-      "paper": "https://arxiv.org/abs/2409.14411",
+      "paper": "https://doi.org/10.1109/icra55743.2025.11128074",
       "project": "https://scaling-diffusion-policy.github.io",
-      "demo": "scaledp.mp4"
+      "demo": "scaledp.mp4",
+      "publication_record": "https://doi.org/10.1109/icra55743.2025.11128074",
+      "metadata": "https://api.crossref.org/works/10.1109/icra55743.2025.11128074"
     },
     "zhu2025objectvla": {
       "paper": "https://arxiv.org/abs/2502.19250",
@@ -57,14 +67,18 @@
       "demo": "robobench_method.jpg"
     },
     "wang2024depthaware": {
-      "paper": "https://arxiv.org/abs/2401.09038",
+      "paper": "https://doi.org/10.1109/robio64047.2024.10907650",
       "project": null,
-      "demo": null
+      "demo": null,
+      "publication_record": "https://doi.org/10.1109/robio64047.2024.10907650",
+      "metadata": "https://api.crossref.org/works/10.1109/robio64047.2024.10907650"
     },
     "wen2024objectcentricinstructionaugmentationrobotic": {
-      "paper": "https://arxiv.org/abs/2401.02814",
+      "paper": "https://doi.org/10.1109/icra57147.2024.10609992",
       "project": "https://oci-robotics.github.io",
-      "demo": "oci.mp4"
+      "demo": "oci.mp4",
+      "publication_record": "https://doi.org/10.1109/icra57147.2024.10609992",
+      "metadata": "https://api.crossref.org/works/10.1109/icra57147.2024.10609992"
     },
     "xu2024surveyroboticsfoundationmodels": {
       "paper": "https://arxiv.org/abs/2402.02385",
@@ -72,9 +86,11 @@
       "demo": null
     },
     "zhu2024languageconditionedroboticmanipulationfast": {
-      "paper": "https://arxiv.org/abs/2401.04181",
+      "paper": "https://doi.org/10.1109/icra57147.2024.10611525",
       "project": "https://jlm-z.github.io/RSFT",
-      "demo": "rfst.mp4"
+      "demo": "rfst.mp4",
+      "publication_record": "https://doi.org/10.1109/icra57147.2024.10611525",
+      "metadata": "https://api.crossref.org/works/10.1109/icra57147.2024.10611525"
     }
   }
 }

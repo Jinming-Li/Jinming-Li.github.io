@@ -11,7 +11,7 @@
   description: Connecting visual and textual affordances to robot actions.
   project: https://chain-of-affordance.github.io/
 - title: DexVLA
-  venue: arXiv 2025
+  venue: CoRL 2025
   src: https://dex-vla.github.io/videos/fold_b.mp4
   caption: Laundry folding in an unseen environment. Shown at 4× speed.
   description: A diffusion expert for dexterous robot manipulation.
