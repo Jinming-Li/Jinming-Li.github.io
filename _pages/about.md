@@ -12,38 +12,6 @@ embodied_ai_content: |
   vision-language models for robotics, and foundation models in embodied AI.
 embodied_ai_papers: true
 
-# Computer Vision Section
-vision_research: true
-vision_content: |
-  Our research in computer vision focuses on developing advanced visual perception systems,
-  particularly in the areas of object detection, scene understanding, and visual reasoning.
-vision_papers: true
-
-# Point Cloud Section
-pointcloud_research: true
-pointcloud_content: |
-  We work on point cloud segmentation and processing, developing novel deep learning 
-  approaches for 3D scene understanding and object segmentation in point cloud data.
-pointcloud_papers: true
-
-# Other Research Section
-other_research: true
-other_research_content: |
-  Additional research interests include machine learning, computer vision, 
-  and artificial intelligence applications.
-other_papers: true
-
-# WeChat Section
-wechat: false # Enable after replacing the placeholder with a real QR code
-wechat_content: |
-  欢迎关注我的微信公众号「AI研究实验室」
-  这里有最新的研究进展、技术分享和学术讨论
-  扫描下方二维码，加入我们的学术社区！
-wechat_qr: wechat_qr.jpg
-wechat_url: # Add a verified account URL here when available
-
-# 其他配置...
-
 profile:
   align: right
   image: prof_ljm.jpg

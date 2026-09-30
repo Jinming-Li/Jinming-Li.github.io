@@ -83,36 +83,6 @@ layout: default
       </section>
     {% endif %}
 
-    {% if page.wechat %}
-      <section class="home-connect" aria-labelledby="connect-title">
-        <div>
-          <p class="home-eyebrow">LET’S CONNECT</p>
-          <h2 id="connect-title">Ideas worth sharing.</h2>
-          <div class="connect-copy">{{ page.wechat_content | markdownify }}</div>
-        </div>
-        {% if page.wechat_qr %}
-          <figure class="connect-qr">
-            {% assign wechat_qr_path = page.wechat_qr | prepend: 'assets/img/' %}
-            {% if page.wechat_url and page.wechat_url != '' %}<a href="{{ page.wechat_url }}" target="_blank" rel="noopener noreferrer">{% endif %}
-            <img src="{{ wechat_qr_path | relative_url }}" alt="微信公众号二维码" width="144" height="144" loading="lazy">
-            {% if page.wechat_url and page.wechat_url != '' %}</a>{% endif %}
-            <figcaption>WeChat · 扫码交流</figcaption>
-          </figure>
-        {% endif %}
-      </section>
-    {% endif %}
-    {% unless page.wechat %}
-      <section class="home-connect email-connect" aria-labelledby="email-connect-title">
-        <div>
-          <p class="home-eyebrow">LET’S CONNECT</p>
-          <h2 id="email-connect-title">Ideas worth sharing.</h2>
-          <p class="connect-copy">Interested in embodied intelligence, robotics, or computer vision? Let’s start a conversation.</p>
-        </div>
-        {% if site.email -%}
-          <a class="home-button primary" href="mailto:{{ site.email }}">Say hello <span aria-hidden="true">↗</span></a>
-        {%- endif %}
-      </section>
-    {% endunless %}
     {% if page.social %}
       <div class="social home-social">
         <div class="contact-icons">{% include social.liquid %}</div>
