@@ -1,10 +1,12 @@
 <div class="paper-entry">
   <div class="paper-info">
     {{ reference }}
-    {% if entry.wechat_link %}
-      <a href="{{ entry.wechat_link }}" class="wechat-link" target="_blank" title="阅读微信版">
-        <i class="fab fa-weixin"></i>
-      </a>
+    {% if entry.wechat_link and entry.wechat_link != '' %}
+      {% unless entry.wechat_link contains 'actual-link-here' %}
+        <a href="{{ entry.wechat_link }}" class="wechat-link" target="_blank" rel="noopener noreferrer" title="阅读微信版" aria-label="阅读微信版">
+          <i class="fab fa-weixin"></i>
+        </a>
+      {% endunless %}
     {% endif %}
   </div>
-</div> 
+</div>

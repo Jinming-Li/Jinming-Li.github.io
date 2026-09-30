@@ -1,0 +1,63 @@
+---
+---
+<div class="home-paper" id="home-{{ entry.key }}">
+  <div class="home-paper-meta">
+    {% if entry.abbr %}{{ entry.abbr }} · {% elsif entry.journal %}{{ entry.journal }} · {% endif -%}
+    {{- entry.year }}
+  </div>
+  <h5 class="home-paper-title">
+    {% if entry.url -%}
+      <a href="{{ entry.url }}">{{ entry.title }}</a>
+    {%- else -%}
+      {{- entry.title -}}
+    {%- endif %}
+  </h5>
+  <div class="home-paper-authors">
+    {% assign author_count = entry.author_array | size %}
+    {% for author in entry.author_array limit: 6 %}
+      {% assign clean_last = author.last | remove: '*' %}
+      {% assign clean_first = author.first | remove: '*' %}
+      {% if site.scholar.last_name contains clean_last and site.scholar.first_name contains clean_first -%}
+        <strong>
+          {{- author.first }}
+          {{ author.last -}}
+        </strong>
+      {%- else -%}
+        {{- author.first }}
+        {{ author.last -}}
+      {%- endif -%}
+      {%- unless forloop.last %}, {% endunless %}
+    {% endfor %}
+    {% if author_count > 6 %}
+      <details>
+        <summary>All {{ author_count }} authors</summary>
+        <p>
+          {% for author in entry.author_array -%}
+            {{- author.first }}
+            {{ author.last -}}
+            {%- unless forloop.last %}, {% endunless -%}
+          {%- endfor %}
+        </p>
+      </details>
+    {% endif %}
+  </div>
+  <div class="home-paper-links">
+    {% if entry.url -%}
+      <a href="{{ entry.url }}">Paper ↗</a>
+    {%- endif %}
+    {% if entry.website -%}
+      <a href="{{ entry.website }}">Project ↗</a>
+    {%- endif %}
+    {% if entry.code -%}
+      <a href="{{ entry.code }}">Code ↗</a>
+    {%- endif %}
+    {% if entry.video -%}
+      <a href="{{ entry.video }}">Video ↗</a>
+    {%- endif %}
+    {% if entry.wechat_link -%}
+      {%- unless entry.wechat_link contains 'actual-link-here' -%}
+        <a href="{{ entry.wechat_link }}">WeChat ↗</a>
+      {%- endunless -%}
+    {%- endif %}
+  </div>
+</div>

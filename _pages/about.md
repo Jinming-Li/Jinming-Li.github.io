@@ -34,13 +34,13 @@ other_research_content: |
 other_papers: true
 
 # WeChat Section
-wechat: true
+wechat: false # Enable after replacing the placeholder with a real QR code
 wechat_content: |
   欢迎关注我的微信公众号「AI研究实验室」
   这里有最新的研究进展、技术分享和学术讨论
   扫描下方二维码，加入我们的学术社区！
 wechat_qr: wechat_qr.jpg
-wechat_url: https://mp.weixin.qq.com/your_account  # 替换成您的公众号链接
+wechat_url: # Add a verified account URL here when available
 
 # 其他配置...
 
