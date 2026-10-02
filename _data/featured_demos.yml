@@ -1,18 +1,21 @@
 - title: HumanoidExo
   venue: ICRA 2026
-  src: https://humanoid-exo.github.io/static/videos/task2_2.mp4
+  src: /assets/img/publication_preview/humanoidexo.mp4
+  poster: humanoidexo-poster.jpg
   caption: Autonomous walking and object placement over 2 m. Shown at 3× speed.
   description: Whole-body skills from wearable human demonstrations.
   project: https://humanoid-exo.github.io/
 - title: CoA-VLA
   venue: ICCV 2025
-  src: https://chain-of-affordance.github.io/static/videos/origin_tasks/Prepare_tea_norm.mp4
+  src: /assets/img/publication_preview/coavla.mp4
+  poster: coavla-poster.jpg
   caption: Preparing tea with affordance-aware reasoning.
   description: Connecting visual and textual affordances to robot actions.
   project: https://chain-of-affordance.github.io/
 - title: DexVLA
   venue: CoRL 2025
-  src: https://dex-vla.github.io/videos/fold_b.mp4
+  src: /assets/img/publication_preview/dexvla.mp4
+  poster: dexvla-poster.jpg
   caption: Laundry folding in an unseen environment. Shown at 4× speed.
   description: A diffusion expert for dexterous robot manipulation.
   project: https://dex-vla.github.io/

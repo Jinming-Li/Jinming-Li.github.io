@@ -10,7 +10,8 @@
     "Template example papers removed from the active bibliography; earlier Git commits preserve them.",
     "Published versions take precedence over preprints; publisher-deposited Crossref metadata used for IEEE publications.",
     "Depth-aware pretraining uses the ROBIO 2024 six-author published version, with Jinming Li first. DexVLA uses the six-author CoRL 2025 proceedings version.",
-    "ObjectVLA, MMRo, and the foundation-model survey have no confirmed venue in the public sources checked; arXiv labels do not imply rejection."
+    "ObjectVLA, MMRo, and the foundation-model survey have no confirmed venue in the public sources checked; arXiv labels do not imply rejection.",
+    "2026-10-02: Project demo clips mirrored as local H.264 videos with fast-start metadata and real-frame posters to avoid external-loading black screens. Original URLs retained below for provenance."
   ],
   "sources": {
     "zhong2026humanoidexo": {

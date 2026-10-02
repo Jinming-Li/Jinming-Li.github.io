@@ -50,7 +50,7 @@ layout: default
     <div class="featured-demos">
       {% for item in site.data.featured_demos %}
         <article class="featured-demo">
-          {% include demo_video.liquid src=item.src title=item.title caption=item.caption featured=true %}
+          {% include demo_video.liquid src=item.src title=item.title caption=item.caption poster=item.poster featured=true %}
           <div class="demo-card-copy">
             <span class="home-paper-meta">{{ item.venue }}</span>
             <h3>{{ item.title }}</h3>
